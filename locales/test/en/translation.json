@@ -1,0 +1,10 @@
+{
+    "title" : "Hello World",
+    "deep" : {
+        "obj": {
+            "verydeep": "Im found"
+        },
+        "array": ["ford", "audi", "toyota"],
+        "str": "Hi again"
+    }
+}
