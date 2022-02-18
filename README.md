@@ -1,8 +1,19 @@
-# Synchronize Translation Files (i18next)
+# Synchronize Translation Files (i18n)
 
-This package will provide an easy way to synchronize json files for a locale.
-Missing translation files and folders will be created (Supply language codes in config)
-Missing keys in json files will be created.
+This is a primitive node module to synchronize additional locale folders to your main one.
+For example, I have public/locales/ path as my locales root folder.
+I have public/locales/en as my main language.
+Any additional languages I have in my config will now be synced to my main language 'en'
+
+1. program will traverse public/locales/en folder for specified file extensions (json) and index them.
+2. it'll create the same file/folder structure for any other languages if needed
+3. It'll match the same translation keys if any of them are missing
+4. Missing keys will be copied over from main language.
+5. A log file will be created to display operations.
+
+
+
+
 
 ## Install
 ```sh
