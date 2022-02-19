@@ -15,7 +15,7 @@ const config = {
 	// ['path','to','locales] path to locales folder exclude language code. Must be array
 	root: ['public', 'locales'],
 	//languages that will be synced to main one
-	languages: ['es', 'it', 'de', 'tr'],
+	languages: ['tr', 'de'],
 	//Only include these file types. Array. Example: ['json', 'txt]
 	languageFileTypes: ['json'],
 	//Max number of files to index. To stop accidental indexing of node_modules folder for example
@@ -249,8 +249,8 @@ const syncJson = (fileDetails, targetLanguage) => {
 	fs.writeFileSync(targetFile, JSON.stringify(targetData, null, '\t'));
 };
 
-const prog = {
-	run: function(conf = config) {
+const SyncTranslationFiles = {
+	run: function() {
 		try {
 			//Find and index all files
 			exploreDir();
@@ -317,4 +317,4 @@ const prog = {
 //Run program
 //For development package json command: "sync-translation": "nodemon SyncTranslation.js -e js,jsx"
 //For prod: "sync-translation": "node SyncTranslation.js"
-module.exports = prog;
+module.exports = SyncTranslationFiles;

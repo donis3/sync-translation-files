@@ -5,7 +5,7 @@
   "main": "translationSyncModule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "syncTranslation": "node sync_translation.js"
+    "syncTranslation": "node test.js"
   },
   "keywords": ["i18n", "json", "translation"],
   "author": "donis3",
